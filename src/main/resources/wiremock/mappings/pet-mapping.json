@@ -1,0 +1,13 @@
+{
+  "request": {
+    "url": "/pets",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "[{\"id\":\"7c78a010-e100-48a5-82d8-278e4cab4824\",\"breed\":\"Bernese Mountain Dog\",\"name\":\"Daisy\",\"dateOfBirth\":1171968225028},{\"id\":\"0bbb7980-91e5-4e4f-902a-d21f297229f1\",\"breed\":\"Bernese Mountain Dog\",\"name\":\"Buddy\",\"dateOfBirth\":1427625825029},{\"id\":\"51f1d89f-8ca0-4fa7-99b7-ce3b6bb45551\",\"breed\":\"Bernese Mountain Dog\",\"name\":\"Cooper\",\"dateOfBirth\":1234262625029},{\"id\":\"deece10b-3b6f-4220-b215-93d5e6ce9f04\",\"breed\":\"Afghan Hound\",\"name\":\"Gracie\",\"dateOfBirth\":1335869025029},{\"id\":\"744b70bd-e61a-479e-9f4d-1a07abb46aad\",\"breed\":\"Dalmatian\",\"name\":\"Riley\",\"dateOfBirth\":1490957025029},{\"id\":\"2608727e-892e-4b7a-9cdb-f613a18cddc0\",\"breed\":\"Afghan Hound\",\"name\":\"Riley\",\"dateOfBirth\":1473504225029},{\"id\":\"555d71ab-e1cd-42d2-9264-d323b3c55026\",\"breed\":\"Bernese Mountain Dog\",\"name\":\"Sadie\",\"dateOfBirth\":1167907425030},{\"id\":\"2c8dee30-d566-4622-93ae-49ee7073d132\",\"breed\":\"Bernese Mountain Dog\",\"name\":\"Max\",\"dateOfBirth\":1294569825030},{\"id\":\"ce6c8a7b-0240-45e9-8188-d38069ca9e0e\",\"breed\":\"Beagle\",\"name\":\"Bella\",\"dateOfBirth\":1373366625030},{\"id\":\"fa20c0f7-4e5c-4e9b-a957-b685329cd4fa\",\"breed\":\"Bloodhound\",\"name\":\"Abby\",\"dateOfBirth\":1149590625030}]"
+  }
+}

@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'org.springframework.boot' version '2.1.8.RELEASE'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+version = '1.0-SNAPSHOT'
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+}
+def awsServerlessContainer = '1.4'
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-web:2.1.8.RELEASE') {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+    }
+    implementation group: 'com.amazonaws.serverless', name: 'aws-serverless-java-container-springboot2', version: awsServerlessContainer
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-contract-wiremock', version: '2.2.1.RELEASE'
+
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.1'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.10.1'
+    implementation 'io.symphonia:lambda-logging:1.0.1'
+    testImplementation group: 'junit', name: 'junit', version: '4.13'
+
+}
+
+task buildJar(type: Jar) {
+    from compileJava
+    from processResources
+    into('lib') {
+        from(configurations.compileClasspath) {
+            exclude 'tomcat-embed-*'
+        }
+    }
+}
+
+build.dependsOn buildJar
