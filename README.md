@@ -1,6 +1,7 @@
-# Serverless Spring Boot 2 example
-A basic pet store written with the [Spring Boot 2 framework](https://projects.spring.io/spring-boot/). The `LambdaHandler` object is the main entry point for Lambda.
+# aws-serverless-wiremock-server
+A basic pet store written with the [Spring Boot 2 framework](https://projects.spring.io/spring-boot/). 
 
+The `LambdaHandler` object is the main entry point for Lambda.
 The application can be deployed in an AWS account using the [Serverless Application Model](https://github.com/awslabs/serverless-application-model). The `sam.yaml` file in the root folder contains the application definition
 
 ## Installation
@@ -11,7 +12,7 @@ In a shell, navigate to the sample's folder and use gradle to build a deployable
 $ ./gradlew clean build
 ```
 
-This command should generate a `serverless-spring-boot-example-1.0-SNAPSHOT.jar` in the `target` folder. Now that we have generated the jar file, we can use the AWS CLI to package the template for deployment. 
+This command should generate a `aws-serverless-wiremock-server-1.0-SNAPSHOT.jar` in the `build/libs` folder. Now that we have generated the jar file, we can use the AWS CLI to package the template for deployment. 
 
 You will need an S3 bucket to store the artifacts for deployment. Once you have created the S3 bucket, run the following command from the sample's folder:
 
@@ -58,5 +59,3 @@ $ aws cloudformation describe-stacks --stack-name ServerlessSpringBootSample
 }
 
 ```
-
-Copy the `OutputValue` into a browser to test a first request.
